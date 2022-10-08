@@ -1,0 +1,11 @@
+[Unit]
+Description=Factorio Server service
+After=network.target
+
+[Service]
+User=gamemaster
+ExecStart=/home/gamemaster/factorio/bin/x64/factorio --server-settings /home/gamemaster/factorio/data/server-settings.json --start-server-load-latest --console-log /home/gamemaster/Factorio.log
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
