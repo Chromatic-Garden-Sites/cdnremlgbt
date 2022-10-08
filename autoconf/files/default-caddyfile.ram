@@ -1,0 +1,9 @@
+yyz1.rem.lgbt {
+        root * /usr/share/caddy
+        # Enable the static file server.
+        #file_server
+        reverse_proxy localhost:3000
+
+        # Or serve a PHP site through php-fpm:
+        # php_fastcgi localhost:9000
+}
