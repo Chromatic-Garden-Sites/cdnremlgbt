@@ -28,6 +28,9 @@ sleep 5
 cd /home/gamemaster
 wget --content-disposition https://www.factorio.com/get-download/latest/headless/linux64 -O factorio.tar.xz
 tar xf factorio.tar.xz
+cd factorio/
+wget https://cdn.ram.lgbt/autoconf/files/factorio-server-adminlist.ram
+mv factorio-server-adminlist.ram server-adminlist.json
 cd factorio/data/
 wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
 mv factorio-server-settings.ram server-settings.json
