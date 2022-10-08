@@ -31,7 +31,7 @@ tar xf factorio.tar.xz
 cd factorio/
 wget https://cdn.ram.lgbt/autoconf/files/factorio-server-adminlist.ram
 mv factorio-server-adminlist.ram server-adminlist.json
-cd factorio/data/
+cd data/
 wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
 mv factorio-server-settings.ram server-settings.json
 pip install requests
