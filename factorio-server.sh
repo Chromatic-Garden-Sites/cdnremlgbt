@@ -33,7 +33,9 @@ wget https://cdn.ram.lgbt/autoconf/files/factorio-server-adminlist.ram
 mv factorio-server-adminlist.ram server-adminlist.json
 cd data/
 wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
+wget https://cdn.ram.lgbt/autoconf/files/factorio-map-gen-settings.ram
 mv factorio-server-settings.ram server-settings.json
+mv map-gen-settings.ram map-gen-settings.json
 pip install requests
 cd /home/gamemaster/factorio/bin/x64
 wget --content-disposition https://raw.githubusercontent.com/narc0tiq/factorio-updater/master/update_factorio.py
@@ -41,7 +43,7 @@ chmod +x ./update_factorio.py
 cd /home/gamemaster/factorio/bin/x64
 ./update_factorio.py -Dxa ./factorio
 mkdir /home/gamemaster/factorio/saves
-/home/gamemaster/factorio/bin/x64/factorio --create /home/gamemaster/factorio/saves/initial.zip
+/home/gamemaster/factorio/bin/x64/factorio --create /home/gamemaster/factorio/saves/initial.zip --map-gen-settings /home/gamemaster/factorio/data/map-gen-settings.json
 chown gamemaster:gamemaster /home/gamemaster -R
 cd /etc/systemd/system
 wget https://cdn.ram.lgbt/autoconf/files/factorio-service.ram
