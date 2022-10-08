@@ -24,7 +24,7 @@ mv /root/issue.net.ram /etc/issue.net
 echo Disabling password authentication
 systemctl restart ssh
 systemctl restart sshd
-apt install syncplay-server -y
+apt install syncplay -y
 apt install certbot -y
 echo Please enter the domain name for syncplay
 read domainname
