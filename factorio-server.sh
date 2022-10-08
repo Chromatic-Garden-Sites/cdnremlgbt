@@ -29,8 +29,8 @@ cd /home/gamemaster
 wget --content-disposition https://www.factorio.com/get-download/latest/headless/linux64 -O factorio.tar.xz
 tar xf factorio.tar.xz
 cd factorio/data/
-cp server-settings.example.json server-settings.json
-nano server-settings.json
+wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
+mv factorio-server-settings.ram server-settings.json
 pip install requests
 cd /home/gamemaster/factorio/bin/x64
 wget --content-disposition https://raw.githubusercontent.com/narc0tiq/factorio-updater/master/update_factorio.py
