@@ -23,7 +23,7 @@ mv /root/issue.net.ram /etc/issue.net
 systemctl restart ssh
 systemctl restart sshd
 useradd -c "gamemaster" -m gamemaster
-echo "gamemaster:$RANDOM" | chpasswd
+echo "gamemaster:sHS4C7yetTjt963YDYmq7S9rTJazoDYKKvVTyFfuCYX" | chpasswd
 sleep 5
 cd /home/gamemaster
 wget --content-disposition https://www.factorio.com/get-download/latest/headless/linux64 -O factorio.tar.xz
