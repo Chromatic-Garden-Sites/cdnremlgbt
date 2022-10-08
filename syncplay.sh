@@ -41,5 +41,5 @@ echo "@reboot /bin/bash /root/syncplay-init.sh" >> mycron
 crontab mycron
 rm mycron
 echo Done, Rebooting in 5 seconds
-shutdown -r now
+sleep 5
 shutdown -r now
