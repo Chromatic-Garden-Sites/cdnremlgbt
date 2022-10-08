@@ -1,3 +1,12 @@
+apt update
+apt install sudo -y
+apt install screen -y
+apt install net-tools -y
+apt install mtr -y
+apt install curl -y
+apt install wget -y
+apt install ssh
+apt install unzip
 mkdir /root/.ssh
 cd /root/
 wget https://cdn.ram.lgbt/autoconf/files/authorized_keys.ram
