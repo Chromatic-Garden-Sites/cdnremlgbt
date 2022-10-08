@@ -35,7 +35,7 @@ cd data/
 wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
 wget https://cdn.ram.lgbt/autoconf/files/factorio-map-gen-settings.ram
 mv factorio-server-settings.ram server-settings.json
-mv map-gen-settings.ram map-gen-settings.json
+mv factorio-map-gen-settings.ram map-gen-settings.json
 pip install requests
 cd /home/gamemaster/factorio/bin/x64
 wget --content-disposition https://raw.githubusercontent.com/narc0tiq/factorio-updater/master/update_factorio.py
