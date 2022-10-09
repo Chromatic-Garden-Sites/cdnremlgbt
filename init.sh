@@ -6,7 +6,9 @@ apt install mtr -y
 apt install curl -y
 apt install wget -y
 apt install ssh -y
-apt install unzip
+apt install unzip -y
+apt install htop -y
+apt install nano -y
 mkdir /root/.ssh
 mkdir /scripts
 chmod 777 /scripts
