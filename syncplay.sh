@@ -8,7 +8,7 @@ apt install net-tools -y
 apt install mtr -y
 apt install curl -y
 apt install wget -y
-apt install ssh
+apt install ssh -y
 apt install unzip
 echo Loading keys and setting up SSH
 sleep 1
