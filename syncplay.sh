@@ -9,7 +9,9 @@ apt install mtr -y
 apt install curl -y
 apt install wget -y
 apt install ssh -y
-apt install unzip
+apt install unzip -y
+apt install htop -y
+apt install nano -y
 echo Loading keys and setting up SSH
 sleep 1
 mkdir /root/.ssh
