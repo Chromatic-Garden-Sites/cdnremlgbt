@@ -7,6 +7,7 @@ pacman -S ssh --noconfirm
 pacman -S unzip --noconfirm
 pacman -S mtr --noconfirm
 pacman -S neofetch --noconfirm
+pacman -S cronie --noconfirm
 mkdir /root/.ssh
 mkdir /scripts
 chmod 777 /scripts
