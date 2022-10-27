@@ -9,8 +9,6 @@ apt install ssh -y
 apt install unzip -y
 apt install htop -y
 apt install nano -y
-apt install python3 -y
-apt install python3-pip -y
 apt install git -y
 mkdir /root/.ssh
 mkdir /scripts
