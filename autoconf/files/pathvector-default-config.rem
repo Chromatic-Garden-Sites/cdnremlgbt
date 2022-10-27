@@ -1,0 +1,100 @@
+asn: 54681
+router-id: [ID-here]
+keep-filtered: true
+default-route: false
+prefixes:
+  - [prefixes-here]
+#source4: 74.119.150.60
+#source6: 2a06:a003:106d::2
+templates:
+  upstream:
+    allow-local-as: true
+    announce: [ "65510,15", "65510:0:15", "65510,20", "65510:0:20", "65510,50", "65510:0:50" ]
+    remove-all-communities: 65510
+    local-pref: 80
+    add-on-import: [ "65510,12", "65510:0:12" ]
+
+  routeserver:
+    filter-transit-asns: true
+    auto-import-limits: true
+    enforce-peer-nexthop: false
+    enforce-first-as: false
+    announce: [ "65510,15", "65510:0:15" ]
+    remove-all-communities: 65510
+    local-pref: 90
+    add-on-import: [ "65510,13", "65510:0:13" ]
+
+  peer:
+    filter-irr: true
+    filter-transit-asns: true
+    auto-import-limits: true
+    auto-as-set: true
+    announce: [ "65510,15", "65510:0:15" ]
+    remove-all-communities: 65510
+    local-pref: 100
+    add-on-import: [ "65510,14", "65510:0:14" ]
+
+  downstream:
+    filter-irr: true
+    filter-rpki: true
+    allow-blackhole-community: true
+    filter-transit-asns: true
+    auto-import-limits: true
+    auto-as-set: true
+    announce: [ "65510,15", "65510:0:15" ]
+    announce-default: true
+    remove-all-communities: 65510
+    local-pref: 200
+    add-on-import: [ "65510,15", "65510:0:15" ]
+
+  nopeerdb:
+    filter-irr: true
+    allow-blackhole-community: true
+    filter-transit-asns: true
+    auto-import-limits: false
+    auto-as-set: false
+    announce: [ "65510,15", "65510:0:15" ]
+    announce-default: true
+    remove-all-communities: 65510
+    local-pref: 200
+    add-on-import: [ "65510,15", "65510:0:15" ]
+
+  backbone:
+    filter-irr: false
+    filter-transit-asns: false
+    allow-local-as: true
+    next-hop-self: true
+    force-peer-nexthop: true
+    pre-import-filter: 'accept;'
+    add-on-import: [ "65510,50", "65510:0:50" ]
+    announce: [ "65510,15", "65510,14", "65510,13", "65510,12", "65510,20" ]
+
+kernel:
+    learn: true
+    export: true
+
+peers:
+  choopa:
+    asn: 64515
+    listen4: [backhaul-ip]
+    listen6: [backhaul-ip]
+    template: upstream
+    local-pref: 90
+    filter-rpki: false
+    pre-export-final: 'accept;'
+    multihop: true
+    prepends: 1
+    password: 5Kp9AW8LnELVc2WY
+    neighbors:
+      - [backhaul-ip]
+      - [backhaul-ip]
+
+  backhaul:
+    asn: 54681
+    listen4: [backhaul-ip]
+    listen6: [backhaul-ip]
+    template: backbone
+    multihop: true
+    neighbors:
+      - [backhaul-ip]
+      - [backhaul-ip]
