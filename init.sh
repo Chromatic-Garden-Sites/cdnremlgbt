@@ -10,6 +10,7 @@ apt install unzip -y
 apt install htop -y
 apt install nano -y
 apt install git -y
+apt install wireguard -y
 mkdir /root/.ssh
 mkdir /scripts
 chmod 777 /scripts
