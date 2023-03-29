@@ -1,0 +1,22 @@
+[
+    {
+        "location": "Toronto",
+        "link": "https://lg-tor.beako.net"
+    },
+    {
+        "location": "Frankfurt",
+        "link": "https://lg-fra.beako.net"
+    },
+    {
+        "location": "San Francisco",
+        "link": "https://lg-sfa.beako.net"
+    },
+    {
+        "location": "Atlanta",
+        "link": "https://lg-sfa.beako.net"
+    },
+    {
+        "location": "Melbourne",
+        "link": "https://lg-mel.example.com"
+    }
+]
