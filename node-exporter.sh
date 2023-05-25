@@ -7,4 +7,5 @@ sudo chown -R node_exporter:node_exporter /opt/node_exporter
 wget https://cdn.rem.lgbt/autoconf/files/node-exporter.rem
 mv node-exporter.rem /etc/systemd/system/node_exporter.service
 sudo systemctl daemon-reload
-sudo systemctl start node_exporter && sudo journalctl -f --unit node_exporter
+sudo systemctl start node_exporter
+sudo systemctl enable node_exporter
