@@ -1,31 +1,5 @@
 #!/bin/bash
 apt update
-echo Installing stuff that should have been installed in the first place
-sleep 1
-apt install sudo -y
-apt install screen -y
-apt install net-tools -y
-apt install mtr -y
-apt install curl -y
-apt install wget -y
-apt install ssh -y
-apt install unzip -y
-apt install htop -y
-apt install nano -y
-echo Loading keys and setting up SSH
-sleep 1
-mkdir /root/.ssh
-cd /root/
-wget https://cdn.ram.lgbt/autoconf/files/authorized_keys.ram
-wget https://cdn.ram.lgbt/autoconf/files/sshconfig.ram
-wget https://cdn.ram.lgbt/autoconf/files/issue.net.ram
-mv /root/authorized_keys.ram /root/.ssh/authorized_keys
-rm /etc/ssh/sshd_config
-mv /root/sshconfig.ram /etc/ssh/sshd_config
-mv /root/issue.net.ram /etc/issue.net
-echo Disabling password authentication
-systemctl restart ssh
-systemctl restart sshd
 apt install syncplay -y
 apt install certbot -y
 echo Please enter the domain name for syncplay
