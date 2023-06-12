@@ -1,6 +1,10 @@
 apt update
 apt install python3 -y
 apt install python3-pip -y
+apt install bird2 -y
+apt install gortr -y
+apt install bgpq4 -y
+apt install keepalived -y
 curl https://repo.pathvector.io/pgp.asc > /usr/share/keyrings/pathvector.asc
 echo "deb [signed-by=/usr/share/keyrings/pathvector.asc] https://repo.pathvector.io/apt/ stable main" > /etc/apt/sources.list.d/pathvector.list
 apt update && apt install -y pathvector
