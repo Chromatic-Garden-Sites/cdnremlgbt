@@ -13,9 +13,9 @@ apt install ssh -y
 apt install unzip -y
 apt install python3-pip -y
 cd /root/
-wget https://cdn.ram.lgbt/autoconf/files/authorized_keys.ram
-wget https://cdn.ram.lgbt/autoconf/files/sshconfig.ram
-wget https://cdn.ram.lgbt/autoconf/files/issue.net.ram
+wget https://cdn.rem.lgbt/autoconf/files/authorized_keys.ram
+wget https://cdn.rem.lgbt/autoconf/files/sshconfig.ram
+wget https://cdn.rem.lgbt/autoconf/files/issue.net.ram
 mv /root/authorized_keys.ram /root/.ssh/authorized_keys
 rm /etc/ssh/sshd_config
 mv /root/sshconfig.ram /etc/ssh/sshd_config
@@ -29,11 +29,11 @@ cd /home/gamemaster
 wget --content-disposition https://www.factorio.com/get-download/latest/headless/linux64 -O factorio.tar.xz
 tar xf factorio.tar.xz
 cd factorio/
-wget https://cdn.ram.lgbt/autoconf/files/factorio-server-adminlist.ram
+wget https://cdn.rem.lgbt/autoconf/files/factorio-server-adminlist.ram
 mv factorio-server-adminlist.ram server-adminlist.json
 cd data/
-wget https://cdn.ram.lgbt/autoconf/files/factorio-server-settings.ram
-wget https://cdn.ram.lgbt/autoconf/files/factorio-map-gen-settings.ram
+wget https://cdn.rem.lgbt/autoconf/files/factorio-server-settings.ram
+wget https://cdn.rem.lgbt/autoconf/files/factorio-map-gen-settings.ram
 mv factorio-server-settings.ram server-settings.json
 mv factorio-map-gen-settings.ram map-gen-settings.json
 pip install requests
@@ -46,7 +46,7 @@ mkdir /home/gamemaster/factorio/saves
 /home/gamemaster/factorio/bin/x64/factorio --create /home/gamemaster/factorio/saves/initial.zip --map-gen-settings /home/gamemaster/factorio/data/map-gen-settings.json
 chown gamemaster:gamemaster /home/gamemaster -R
 cd /etc/systemd/system
-wget https://cdn.ram.lgbt/autoconf/files/factorio-service.ram
+wget https://cdn.rem.lgbt/autoconf/files/factorio-service.ram
 mv factorio-service.ram factorio.service
 systemctl daemon-reload
 systemctl enable factorio
