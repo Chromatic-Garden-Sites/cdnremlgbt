@@ -9,6 +9,7 @@ apt install ssh -y
 apt install unzip -y
 apt install htop -y
 apt install nano -y
+apt install systemd-cron -y
 apt install git -y
 apt install wireguard -y
 mkdir /root/.ssh
