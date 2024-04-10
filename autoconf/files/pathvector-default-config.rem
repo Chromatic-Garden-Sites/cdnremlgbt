@@ -2,6 +2,7 @@ asn: 54681
 router-id: [ID-here]
 keep-filtered: true
 default-route: false
+blocklist-urls: [ "https://badnets.7circles.moe/blocklist-for-pathvector.txt" ]
 prefixes:
   - [prefixes-here]
 #source4: 74.119.150.60
