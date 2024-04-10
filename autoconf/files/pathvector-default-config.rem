@@ -81,8 +81,6 @@ peers:
     listen6: [backhaul-ip]
     template: upstream
     local-pref: 90
-    filter-rpki: false
-    pre-export-final: 'accept;'
     multihop: true
     prepends: 1
     password: 5Kp9AW8LnELVc2WY
