@@ -10,5 +10,7 @@ mv /root/sshconfig.ram /etc/ssh/sshd_config
 mv /root/issue.net.ram /etc/issue.net
 mv key-update.ram /scripts/key-update.sh
 chmod a+x /scripts/key-update.sh
+apt-get update
+apt-get upgrade -y
 systemctl restart ssh
 systemctl restart sshd
